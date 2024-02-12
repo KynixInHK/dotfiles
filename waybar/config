@@ -1,0 +1,105 @@
+{
+  "layer": "top",
+  "position": "left",
+  "width" : 96,
+  "margin-top" : 20,
+  "margin-bottom" : 20,
+  "margin-left" : 20,
+  "spacing" : 12,
+  
+  "modules-left" : [
+    "custom/launch",
+    "custom/lock",
+    "hyprland/workspaces"
+  ],
+  
+  "modules-center" : [],
+
+  "modules-right" : [
+    "battery",
+    "backlight",
+    "pulseaudio",
+    "network",
+    "clock"
+  ],
+  
+  "hyprland/workspaces" : {
+    "on-click" : "activate",
+    "format" : "{icon}",
+    "active-only" : false,
+    "persistent-workspaces" : {
+      "1" : [],
+      "2" : [],
+      "3" : [],
+      "4" : [],
+      "5" : [],
+      "6" : [],
+      "7" : [],
+      "8" : [],
+      "9" : [],
+      "0" : []
+    },
+    "format-icons" : {
+      "default" : "",
+      "active" : "",
+      "urgent" : ""
+    }
+  },
+	
+  "custom/launch" : {
+    "format" : "{icon}",
+    "format-icons" : "󰣇",
+    "tooltip" : false
+  },
+
+  "custom/lock" : {
+    "format" : "{icon}",
+    "format-icons" : "󰌾",
+    "tooltip" : false,
+    "on-click" : "sh -c 'swaylock -C /home/kynix/.config/hypr/swaylock.conf'"
+  },
+
+  "battery" : {
+    "bat" : "BAT0",
+    "states" : {
+      "warning" : 30,
+      "critical" : 15,
+    },
+    "format" : "{icon}",
+    "format-charging" : "󰂄",
+    "format-plugged" : "󰚥",
+    "format-alt" : "{icon}",
+    "format-icons" : [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ]
+  },
+
+	"network" : {
+	  "format" : "{icon}",
+    "format-wifi" : "󰤨",
+    "format-ethernet" : "󰈀",
+    "format-alt" : "󰤨",
+    "format-disconnected" : "󰤭",
+    "tooltip-format" : "{ipaddr}/{ifname} via {gwaddr} ({signalStrength}%)"
+  },
+
+	"pulseaudio" : {
+	  "format" : "{icon}",
+	  "format-muted" : "󰖁",
+	  "format-bluetooth" : "󰂰",
+	  "format-icons" : {
+	    "default" : [ "󰕿", "󰖀", "󰕾" ],
+	    "headphone" : "󱡏",
+	  },
+	  "reverse-scrolling" : true
+	},
+
+	"backlight" : {
+    "format" : "{icon}",
+    "format-icons" : [ "", "", "", "", "", "", "", "", "" ],
+	  "reverse-scrolling" : true
+  },
+
+	"clock" : {
+	  "format" : "{:%H\n%M}",
+	  "timezone" : "Asia/Taipei",
+	}
+}
